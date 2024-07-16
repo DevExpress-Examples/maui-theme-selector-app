@@ -1,0 +1,59 @@
+﻿<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dx="http://schemas.devexpress.com/maui"
+    xmlns:local="clr-namespace:ThemeSelectorApp"
+    BackgroundColor="{dx:ThemeColor Surface}"
+    x:Class="ThemeView.ThemesPage">
+    <ContentPage.BindingContext>
+        <local:ThemesViewModel/>
+    </ContentPage.BindingContext>
+    <dx:DXScrollView>
+        <dx:DXStackLayout Orientation="Vertical" Margin="16,0" ItemSpacing="16">
+            <Grid ColumnDefinitions="*,Auto" Margin="0,16">
+                <Label Text="Color Scheme" TextColor="{dx:ThemeColor OnSurface}" FontSize="14" FontAttributes="Bold" Grid.Column="0"/>
+                <Label Text="{Binding PreviewColorName}" TextColor="{dx:ThemeColor OnSurfaceVariant}" FontSize="12" Grid.Column="1"/>
+            </Grid>
+
+            <dx:ChoiceChipGroup SelectedItem="{Binding SelectedColor, Mode=TwoWay}" ItemsSource="{Binding Items}" ChipBorderColor="Transparent" ChipBorderThickness="2" Padding="0"
+                ChipSelectedBackgroundColor="Transparent" ChipSelectedBorderColor="{dx:ThemeColor OnSurface}" IsMultiline="True" ChipPadding="3"
+                ChipCornerRadius="28">
+                <dx:ChoiceChipGroup.ChipContentTemplate>
+                    <DataTemplate>
+                        <dx:DXBorder CornerRadius="26" WidthRequest="52" HeightRequest="52" BackgroundColor="{Binding Color}">
+                            <Label Text="{Binding Name}" TextColor="White" FontSize="12" HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center" WidthRequest="52" HeightRequest="52"/>
+                        </dx:DXBorder>
+                    </DataTemplate>
+                </dx:ChoiceChipGroup.ChipContentTemplate>
+            </dx:ChoiceChipGroup>
+
+            <Label Text="Mode" TextColor="{dx:ThemeColor OnSurface}" FontSize="14" FontAttributes="Bold"/>
+            <dx:DXCollectionView ItemsSource="{Binding ThemeTypes}" 
+                                 AllowDeselectSingleItem="False"
+                                 SelectionMode="Single"
+                                 ReduceSizeToContent="True"
+                                 ItemSpacing="10"
+                                 SelectedItem="{Binding SelectedThemeType, Mode=TwoWay}">
+                <dx:DXCollectionView.SelectedItemTemplate>
+                    <DataTemplate>
+                        <dx:DXStackLayout Orientation="Horizontal" ItemSpacing="15">
+                            <dx:DXImage Source="radiobuttonchecked" TintColor="{dx:ThemeColor Primary}"/>
+                            <Label Text="{Binding Path=.}" FontSize="14"/>
+                        </dx:DXStackLayout>
+                    </DataTemplate>
+                </dx:DXCollectionView.SelectedItemTemplate>
+                <dx:DXCollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <dx:DXStackLayout Orientation="Horizontal" ItemSpacing="15">
+                            <dx:DXImage Source="radiobuttonunchecked" TintColor="{dx:ThemeColor Primary}"/>
+                            <Label Text="{Binding Path=.}" FontSize="14"/>
+                        </dx:DXStackLayout>
+                    </DataTemplate>
+                </dx:DXCollectionView.ItemTemplate>
+            </dx:DXCollectionView>
+
+            <dx:DXButton Content="This Button is Themed" ButtonType="Filled" Margin="0,32,0,16"/>
+        </dx:DXStackLayout>
+    </dx:DXScrollView>
+</ContentPage>

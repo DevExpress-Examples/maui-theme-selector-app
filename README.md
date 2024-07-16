@@ -18,8 +18,8 @@ This example uses DevExpress .NET MAUI Components to create a Material Design 3 
 * [Label](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/label?view=net-maui-8.0): [Text](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.label.text?view=net-maui-8.0)
 * [ChoiceChipGroup](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ChoiceChipGroup): [SelectedItem](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ChoiceChipGroup.SelectedItem), [IsMultiline](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ChipGroup.IsMultiline), [ItemsSource](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ChipGroup.ItemsSource), [ChipContentTemplate](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ChipGroup.ChipContentTemplate)
 * [DXBorder](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXBorder): [BackgroundColor](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.visualelement.backgroundcolor?view=net-maui-8.0), [CornerRadius](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXViewBase.CornerRadius)
-* [DXCollectionView](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView): [SelectedItemTemplate](https://docs.devexpress.com/MAUI/https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.SelectedItemTemplate), [ItemsSource](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.ItemsSource), [ItemTemplate](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.ItemTemplate)
-* [DXButton](https://docs.devexpress.devx/MAUI/DevExpress.Maui.Core.DXButton): [Content](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXBorder.Content), [ButtonType](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXButton.ButtonType)
+* [DXCollectionView](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView): [SelectedItemTemplate](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.SelectedItemTemplate), [ItemsSource](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.ItemsSource), [ItemTemplate](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.ItemTemplate)
+* [DXButton](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXButton): [Content](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXBorder.Content), [ButtonType](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXButton.ButtonType)
 
 ## Implementation Details
 
@@ -149,7 +149,7 @@ This example uses DevExpress .NET MAUI Components to create a Material Design 3 
 * [ChoiceChipGroup](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ChoiceChipGroup)
 * [DXBorder](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXBorder)
 * [DXCollectionView](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView)
-* [DXButton](https://docs.devexpress.devx/MAUI/DevExpress.Maui.Core.DXButton)
+* [DXButton](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXButton)
 
 ## More Examples
 

@@ -4,9 +4,9 @@
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
 
-# DevExpress .NET MAUI Controls - Implement a Selector for Material Design 3 Themes
+# DevExpress .NET MAUI Controls - Implement a Material Design 3 Theme Selector
 
-This example uses DevExpress .NET MAUI Components to build a selector for Material Design 3 themes.
+This example uses DevExpress .NET MAUI Components to create a Material Design 3 theme selector.
 
 <img width="40%" alt="DevExpress Chat for .NET MAUI" src="Images/app-preview.png">
 
@@ -44,7 +44,7 @@ This example uses DevExpress .NET MAUI Components to build a selector for Materi
     </dx:ChoiceChipGroup>
     ```
 
-2. As you see in the previous step, the `ChoiceChipGroup` control obtains data from the view model's `Items` collection. Populate this collection with pre-defined colors. Use the `ThemeManager.GetSeedColor()` method to obtain [seed colors](https://docs.devexpress.com/MAUI/404636/common-concepts/themes#create-a-theme-based-on-a-custom-seed-color).
+3. As you see in the previous step, the `ChoiceChipGroup` control obtains data from the view model's `Items` collection. Populate this collection with pre-defined colors. Use the `ThemeManager.GetSeedColor()` method to obtain [seed colors](https://docs.devexpress.com/MAUI/404636/common-concepts/themes#create-a-theme-based-on-a-custom-seed-color).
 
     ```csharp
     public ThemesViewModel() {
@@ -61,7 +61,7 @@ This example uses DevExpress .NET MAUI Components to build a selector for Materi
     }
     ``` 
 
-3. Use the `new Theme()` constructor to create a new theme based on the selected color.
+4. Use the `new Theme()` constructor to create a new theme based on the selected color.
 
     ```csharp
     [ObservableProperty]
@@ -83,7 +83,7 @@ This example uses DevExpress .NET MAUI Components to build a selector for Materi
         ThemeManager.Theme = new Theme(value.Color);
     }    
 
-4. Use the [`DXCollectionView`](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView) control to display radio buttons that allow you to select a theme type (*dark/light/system*). Specify the data source and item templates (use different templates for selected and deselected items).
+5. Use the [`DXCollectionView`](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView) control to display radio buttons that allow you to select a theme type (*dark/light/system*). Specify the data source and item templates (use different templates for selected and deselected items).
 
     ```xaml
     <dx:DXCollectionView ...
